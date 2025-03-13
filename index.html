@@ -11,7 +11,7 @@
     <style>
         /* Reset and base styles */
         * {
-            margin: 00;
+            margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
@@ -44,7 +44,7 @@
             font-weight: 900;
             font-size: 24px;
             letter-spacing: 1px;
-            width: 33.33%;
+            width: 30%;
             color: #4da6ff;
         }
 
@@ -52,13 +52,59 @@
             font-family: 'Merriweather', serif;
             font-weight: 700;
             font-size: 22px;
-            width: 33.33%;
+            width: 40%;
             text-align: center;
             color: #ffffff;
         }
 
-        .right-spacer {
-            width: 33.33%;
+        .right-corner {
+            width: 30%;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .family-friend-btn {
+            background-color: #4da6ff;
+            color: #000;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 700;
+            padding: 6px 12px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 14px;
+            cursor: pointer;
+            border: none;
+            transition: background-color 0.3s;
+        }
+
+        .family-friend-btn:hover {
+            background-color: #ffffff;
+        }
+
+        /* Navigation menu */
+        .nav-menu {
+            display: flex;
+            justify-content: center;
+            background-color: #f5f5f5;
+            padding: 10px 0;
+            margin-bottom: 30px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .nav-menu a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #000;
+            font-weight: 700;
+            padding: 5px 10px;
+        }
+
+        .nav-menu a:hover {
+            color: #4da6ff;
+        }
+
+        .nav-menu a.active {
+            border-bottom: 2px solid #4da6ff;
         }
 
         /* Content styles */
@@ -138,6 +184,67 @@
             font-style: italic;
         }
 
+        /* Private access section */
+        .private-section {
+            background-color: #f8f8f8;
+            padding: 40px 20px;
+            text-align: center;
+            border-radius: 8px;
+            max-width: 600px;
+            margin: 0 auto;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .private-section h3 {
+            font-family: 'Roboto', sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #000;
+        }
+
+        .access-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            max-width: 300px;
+            margin: 0 auto;
+        }
+
+        .access-form input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        .access-form button {
+            background-color: #4da6ff;
+            color: #fff;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 700;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            border: none;
+            transition: background-color 0.3s;
+            width: 100%;
+        }
+
+        .access-form button:hover {
+            background-color: #0066cc;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .private-posts {
+            margin-top: 40px;
+        }
+
         /* Footer styles */
         .end {
             background-color: #000;
@@ -181,18 +288,23 @@
             }
             
             .left-name {
-                font-size: 21px;
+                font-size: 18px;
                 width: 25%;
             }
             
             .center-title {
-                font-size: 21px;
+                font-size: 18px;
                 width: 50%;
                 font-weight: 900;
             }
             
-            .right-spacer {
+            .right-corner {
                 width: 25%;
+            }
+            
+            .family-friend-btn {
+                padding: 4px 8px;
+                font-size: 12px;
             }
             
             /* Adjust content for mobile */
@@ -242,6 +354,15 @@
             .end-head {
                 font-size: 22px;
             }
+            
+            /* Navigation menu adjustments */
+            .nav-menu {
+                flex-wrap: wrap;
+            }
+            
+            .nav-menu a {
+                margin: 5px;
+            }
         }
         
         /* Extra small devices */
@@ -286,11 +407,19 @@
     <div class="main-header-div">
         <div class="left-name">SHIVANK</div>
         <div class="center-title">THE BLOG</div>
-        <div class="right-spacer"></div> <!-- Empty div to maintain 3-column layout -->
+        <div class="right-corner">
+            <a href="private.html" class="family-friend-btn">FAMILY & FRIENDS</a>
+        </div>
+    </div>
+
+    <!-- Navigation Menu -->
+    <div class="nav-menu">
+        <a href="index.html" class="active">HOME</a>
+        <a href="private.html">PRIVATE POSTS</a>
     </div>
 
     <!-- Content Section -->
-    <div class="content">
+    <div class="content" id="home-content">
         <h2>BLOG POSTS</h2>
 
         <div class="post">
